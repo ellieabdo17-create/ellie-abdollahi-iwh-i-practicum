@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1= title
+
+    a(href="/update-cobj") Add New Record
+
+    br
+    br
+
+    each contact in contacts
+      div
+        p First Name: #{contact.properties.firstname}
+        p Last Name: #{contact.properties.lastname}
+        p Email: #{contact.properties.email}
+        p Customer Name: #{contact.properties.customer_name}
+        p License Type: #{contact.properties.license_type}
+        p Expiration Date: #{contact.properties.expiration_date}
+        hr
